@@ -1,0 +1,76 @@
+body{
+        height:100vh;
+		background-color:#000000;
+		color:#FFFFFF;
+        align-items:center;
+		padding:0px;
+		margin:0px;
+		display:flex;
+		justify-content:center;
+    }
+		.Kolobok{
+			width:200px;
+			height: 200px;
+			border-radius: 100%;
+			background-color: yellow;
+			position: relative;
+        }
+			.Eye{
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				background-color:#333333;
+				position: absolute;
+				top: 30px;
+				right: 50px;
+				position: absolute;
+            }
+				.Mouth{
+					background-color:#000000;
+					position:absolute;
+					width:100%;
+					height:100%;
+clip-path: polygon(100% 75%, 45% 50%, 100% 25%);
+animation-name: eat;
+animation-duration: 0.5s;
+animation-iteration-count: infinite;
+}
+.Eda{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 220px;
+    top: 43%;
+    animation: Eda 0.5s infinite;
+}
+	
+@keyframes eat{
+0%{
+	clip-path:polygon(100% 75%, 45% 48%, 100% 20%);
+	}
+	25%{
+	clip-path:polygon(100% 60%, 45% 48%, 100% 40%);
+	}
+	50%{
+	clip-path:polygon(100% 50%, 45% 48%, 100% 50%);
+	}
+	75%{
+	clip-path:polygon(100% 60%, 45% 48%, 100% 35%);
+	}
+	100%{
+	clip-path:polygon(100% 75%, 45% 48%, 100% 20%);
+	}
+}
+
+@keyframes Eda{
+    0%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
